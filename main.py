@@ -514,7 +514,7 @@ elif quick_testing:
     if FLAGS.input_type == "sdf" or FLAGS.input_type == "voxel" or FLAGS.input_type == "udf":
         #Create test dataset
         dataset_test = dataset.single_shape_grid(FLAGS.test_input, receptive_padding, FLAGS.input_type, is_undc=(FLAGS.method == "undc"))
-        dataloader_test = torch.utils.data.DataLoader(dataset_test, batch_size=1, shuffle=False, num_workers=1)  #batch_size must be 1
+        dataloader_test = torch.utils.data.DataLoader(dataset_test, batch_size=1, shuffle=False, num_workers=0)  #batch_size must be 1
 
         for i, data in enumerate(dataloader_test, 0):
 
