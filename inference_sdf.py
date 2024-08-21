@@ -74,4 +74,5 @@ if __name__ == "__main__":
         np.ascontiguousarray(pred_output_float, np.float32),
     )
     vertices = vertices / 128 * 2 - 1
+    trimesh.Trimesh(vertices, triangles).wa
     trimesh.Trimesh(vertices, triangles).export("1.ply")
